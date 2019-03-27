@@ -9,7 +9,8 @@ ADD . /app
 RUN ./install_software.sh
 
 # Set the python path
-ENV PYTHONPATH /app/lib/python3.5/site-packages/:/app/lib/
+ENV PYTHONPATH /usr/local/lib:/app/lib/python3.5/site-packages/:/app/lib/
+ENV LD_LIBRARY_PATH /usr/local/lib:/app/lib
 
 # Create a user that does not have root privileges 
 ARG username=physicist
